@@ -2,7 +2,8 @@ import requests
 import convert
 import re
 
-r = requests.get(url='https://us-central1-fixel-project.cloudfunctions.net/getUser');
+URL = 'https://us-central1-fixel-project.cloudfunctions.net/getUser';
+r = requests.get(url=);
 s = r.json();
 user = s['data'];
 x = 'https://us-central1-fixel-project.cloudfunctions.net/getData?data={"user":"' + user + '"}';
@@ -24,3 +25,6 @@ img_data = str.encode(img_data);
 
 
 convert.conv64(img_data,img_type);
+
+if __name__=="main":
+  main()
